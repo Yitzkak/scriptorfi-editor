@@ -1,0 +1,21 @@
+# Django-specific files
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+staticfiles/
+
+# React-specific files
+node_modules/
+build/
+
+# Environment files
+.env
+
+# MacOS, Windows, and Linux system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
