@@ -1,1 +1,1 @@
-web: python3 manage.py runserver 0.0.0.0:$PORT
+web: python3 -m gunicorn transcription_project.wsgi --log-file -
