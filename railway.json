@@ -1,9 +1,0 @@
-{
-    "build": {
-      "builder": "Nixpacks"
-    },
-    "deploy": {
-      "startCommand": "pip install -r requirements.txt && python manage.py migrate && gunicorn transcription_project.wsgi --log-file -"
-    }
-  }
-  
