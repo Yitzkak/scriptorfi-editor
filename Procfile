@@ -1,1 +1,2 @@
-web: gunicorn transcription_project.wsgi --log-file -
+web: python3 -m gunicorn transcription_project.wsgi --log-file -
+
