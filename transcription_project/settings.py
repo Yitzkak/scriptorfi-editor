@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-eb95i5mur$oxg0dmm$a&tvam6nub&r5sa79@gudxdnhj&682a^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["scriptorfi-editor-production.up.railway.app", "localhost"]
 
 # Application definition
 
@@ -57,7 +57,8 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://localhost:3001"
+    "http://localhost:3001",
+    "https://scriptorfi-editor-production.up.railway.app"
 ]
 
 ROOT_URLCONF = "transcription_project.urls"
