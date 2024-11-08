@@ -61,6 +61,10 @@ CORS_ALLOWED_ORIGINS = [
     "https://scriptorfi-editor-production.up.railway.app"
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://scriptorfi-editor-production.up.railway.app"
+]
+
 ROOT_URLCONF = "transcription_project.urls"
 
 TEMPLATES = [
