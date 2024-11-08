@@ -3,8 +3,7 @@
       "builder": "Nixpacks"
     },
     "deploy": {
-      "startCommand": "gunicorn transcription_project.wsgi --log-file -",
-      "postdeploy": "python manage.py migrate"
+      "startCommand": "python manage.py migrate && gunicorn transcription_project.wsgi --log-file -"
     }
   }
   

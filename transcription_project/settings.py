@@ -29,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -81,13 +80,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "transcription_project.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 DATABASES = {
     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
