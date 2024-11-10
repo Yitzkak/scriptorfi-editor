@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-eb95i5mur$oxg0dmm$a&tvam6nub&r5sa79@gudxdnhj&682a^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["scriptorfi-editor-production.up.railway.app", "localhost", "https://intelliscribe-domm0a3ca-yitzkaks-projects.vercel.app", "https://intelliscribe.vercel.app"]
+ALLOWED_HOSTS = ["scriptorfi-editor-production.up.railway.app", "localhost", "https://intelliscribe-domm0a3ca-yitzkaks-projects.vercel.app", "https://intelliscribe.vercel.app", "scriptorfi.site"]
 
 # Application definition
 
