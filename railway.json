@@ -3,7 +3,7 @@
       "builder": "Nixpacks"
     },
     "deploy": {
-      "startCommand": "gunicorn transcription_project.wsgi --log-file -"
+      "startCommand": "gunicorn --timeout 480 transcription_project.wsgi:application"
     }
   }
   

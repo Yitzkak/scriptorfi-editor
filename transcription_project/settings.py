@@ -61,13 +61,13 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_EXPOSE_HEADERS = ["Content-Type", "Authorization"]
 
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:3001",
-    "https://scriptorfi-editor-production.up.railway.app",
-    "https://intelliscribe-domm0a3ca-yitzkaks-projects.vercel.app",
-    "https://intelliscribe.vercel.app"
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+#     "http://localhost:3001",
+#     "https://scriptorfi-editor-production.up.railway.app",
+#     "https://intelliscribe-domm0a3ca-yitzkaks-projects.vercel.app",
+#     "https://intelliscribe.vercel.app"
+# ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://scriptorfi-editor-production.up.railway.app",
@@ -146,7 +146,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-DATA_UPLOAD_MAX_MEMORY_SIZE = 104857600  # 100 MB
+DATA_UPLOAD_MAX_MEMORY_SIZE = 1048576000  # 100 MB
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760000  # 10 GB (adjust as needed)
 
 
@@ -156,3 +156,22 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'UTC'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'debug.log'),
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
